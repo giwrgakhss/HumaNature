@@ -19,3 +19,5 @@ Real destinations with more detailed information
 Volunteering section
 Cleaner design and animations
 Further development of the brand
+Multilingual support including a Greek translation of the website
+
