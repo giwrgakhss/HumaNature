@@ -1,0 +1,185 @@
+/* HumaNature — questionnaire */
+.questionnaire-container {
+  width: min(100% - 48px, 900px);
+  margin: 30px auto 70px;
+}
+
+.questionnaire-header,
+.questionnaire-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.questionnaire-header {
+  margin-bottom: 20px;
+}
+
+.back-link,
+#step-counter {
+  color: var(--pantalon);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.progress-track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: rgb(255 255 255 / 45%);
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: var(--green-smoke);
+  transition: width 0.3s ease;
+}
+
+.question-content {
+  min-height: 440px;
+  padding: 65px 0 45px;
+}
+
+.question-eyebrow {
+  margin-bottom: 18px;
+  color: var(--sulking-room-pink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#question-title {
+  max-width: 760px;
+  margin-bottom: 15px;
+  color: var(--pantalon);
+  font-size: clamp(33px, 5.5vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+#question-description {
+  margin-bottom: 32px;
+  color: var(--dibber);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.option-card {
+  position: relative;
+  min-height: 95px;
+  padding: 20px 50px 20px 22px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background: var(--berrington-blue);
+  color: #162725;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.option-card:hover {
+  border-color: var(--pantalon);
+  transform: translateY(-2px);
+}
+
+.option-card.selected {
+  border-color: var(--pantalon);
+  background: var(--sulking-room-pink);
+}
+
+.option-card.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 14px;
+  transform: translateY(-50%);
+}
+
+.text-answer-container {
+  max-width: 760px;
+}
+
+.text-answer-container label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--pantalon);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#free-text-answer {
+  width: 100%;
+  min-height: 180px;
+  padding: 22px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background: rgb(255 255 255 / 55%);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+#free-text-answer:focus {
+  border-color: var(--green-smoke);
+}
+
+.optional-hint {
+  margin-top: 12px;
+  color: var(--dibber);
+  font-size: 13px;
+}
+
+.questionnaire-footer {
+  padding-top: 20px;
+  border-top: 1px solid rgb(0 0 0 / 15%);
+}
+
+/* Keep the Continue button in place on the first step. */
+.questionnaire-footer #next-btn {
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .questionnaire-container {
+    width: calc(100% - 36px);
+    margin-top: 15px;
+  }
+
+  .question-content {
+    min-height: auto;
+    padding: 40px 0 30px;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .option-card {
+    min-height: 75px;
+    padding: 18px 50px 18px 19px;
+  }
+
+  .questionnaire-footer button {
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+}

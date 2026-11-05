@@ -1,0 +1,412 @@
+/* HumaNature — recommendations */
+.recommendations-container {
+  width: min(100% - 48px, 1300px);
+  margin: 20px auto 75px;
+}
+
+.recommendations-intro {
+  margin-bottom: 45px;
+  padding: clamp(30px, 5vw, 65px);
+  border-radius: 28px;
+  background: var(--paper);
+}
+
+.recommendations-intro h1 {
+  max-width: 800px;
+  margin-bottom: 20px;
+  color: var(--pantalon);
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+}
+
+.recommendations-intro h1 em {
+  color: var(--green-smoke);
+  font-style: normal;
+}
+
+.recommendations-intro > p:not(.eyebrow) {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.profile-summary,
+.category-filters,
+.matching-characteristics,
+.trip-meta,
+.trip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.profile-summary {
+  margin-top: 28px;
+}
+
+.profile-pill,
+.meta-pill {
+  padding: 8px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-pill {
+  background: var(--white);
+}
+
+.results-toolbar h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+#results-count {
+  color: var(--pantalon);
+  font-size: 16px;
+}
+
+.category-filters {
+  margin: 22px 0;
+}
+
+.filter-chip {
+  min-height: 40px;
+  padding: 10px 17px;
+  border: 1px solid var(--pantalon);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filter-chip:hover {
+  background: rgb(255 255 255 / 35%);
+}
+
+.filter-chip.active {
+  border-color: var(--sulking-room-pink);
+  background: var(--sulking-room-pink);
+}
+
+.results-message {
+  margin: 20px 0;
+  color: var(--pantalon);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.featured-card,
+.trip-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--paper);
+}
+
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 38px;
+}
+
+.featured-content,
+.trip-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.featured-content {
+  padding: clamp(25px, 4vw, 55px);
+}
+
+.featured-kicker {
+  color: var(--sulking-room-pink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.featured-content h3 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.featured-content > p:not(.featured-kicker) {
+  line-height: 1.6;
+}
+
+.alternatives-heading {
+  margin: 20px 0 22px;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-card-body {
+  flex: 1;
+  padding: 23px;
+}
+
+.trip-card h3 {
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.trip-card-summary {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.trip-card-top,
+.dialog-intro {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.trip-location {
+  color: var(--pantalon);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.match-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  white-space: nowrap;
+  padding: 8px 13px;
+  border: 1px solid rgb(38 52 47 / 15%);
+  border-radius: 100px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.match-badge strong {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.matching-characteristics {
+  gap: 7px;
+}
+
+.matching-tag,
+.matching-empty {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.matching-tag {
+  padding: 7px 11px;
+  border-radius: 100px;
+  background: rgb(106 121 112 / 16%);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.matching-empty {
+  color: var(--pantalon);
+}
+
+.alternative-note {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgb(160 131 131 / 20%);
+  color: #493b3b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.meta-pill {
+  border: 1px solid #d5cec3;
+  background: rgb(255 255 255 / 70%);
+  font-weight: 400;
+}
+
+.trip-actions {
+  width: 100%;
+  margin-top: auto;
+}
+
+.trip-actions .primary-btn,
+.trip-actions .secondary-btn {
+  min-height: 43px;
+  padding: 10px 15px;
+  font-size: 13px;
+}
+
+.save-btn.is-saved {
+  border-color: var(--sulking-room-pink);
+  background: rgb(160 131 131 / 25%);
+}
+
+/* Solid colors replace trip photos. */
+.trip-visual {
+  min-height: 210px;
+  background: var(--green-smoke);
+}
+
+.trip-visual.color-dibber { background: var(--dibber); }
+.trip-visual.color-pink { background: var(--sulking-room-pink); }
+.trip-visual.color-blue { background: var(--berrington-blue); }
+.trip-visual.color-green { background: var(--green-smoke); }
+
+.featured-card .trip-visual {
+  min-height: 385px;
+}
+
+.empty-results,
+.page-error {
+  max-width: 750px;
+  margin: 35px auto;
+  padding: 40px;
+  border-radius: 23px;
+  background: var(--paper);
+  text-align: center;
+}
+
+.empty-results h3,
+.page-error h2 {
+  margin-bottom: 12px;
+}
+
+.empty-results p,
+.page-error p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.disclaimer {
+  max-width: 950px;
+  margin: 60px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgb(0 0 0 / 20%);
+  color: var(--pantalon);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* Details dialog */
+.trip-dialog {
+  width: min(92vw, 700px);
+  max-height: 90vh;
+  padding: 0;
+  overflow-y: auto;
+  border: 0;
+  border-radius: 23px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.trip-dialog::backdrop {
+  background: rgb(21 35 31 / 65%);
+}
+
+.dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 25px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#dialog-close {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1;
+}
+
+#dialog-close:hover {
+  background: rgb(38 52 47 / 10%);
+}
+
+#dialog-art .trip-visual {
+  min-height: 230px;
+}
+
+.dialog-body {
+  padding: 30px;
+}
+
+.dialog-body h2 {
+  margin: 10px 0 15px;
+  font-size: clamp(28px, 5vw, 36px);
+}
+
+.dialog-body h3 {
+  margin: 25px 0 12px;
+}
+
+.dialog-body > p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.dialog-body ul {
+  margin: 0 0 20px;
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.dialog-body .trip-meta {
+  margin: 18px 0;
+}
+
+@media (max-width: 900px) {
+  .trips-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .recommendations-container {
+    width: calc(100% - 36px);
+  }
+
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card .trip-visual {
+    order: -1;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 520px) {
+  .trips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dialog-body {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover nature experiences matched to your preferences.">
+  <title>Your Adventures | HumaNature</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/recommendations.css">
+  <script src="data/trips.js" defer></script>
+  <script src="js/recommendations.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="HumaNature home">HumaNature<span>.</span></a>
+    <a class="header-link" href="questionnaire.html">Edit my answers ↗</a>
+  </header>
+
+  <main class="recommendations-container">
+    <section class="recommendations-intro" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR PERSONALIZED GREEK ESCAPES</p>
+      <h1 id="page-title">Made for <em>you.</em></h1>
+      <p>Discover outdoor experiences selected around your interests, preferences and sense of adventure.</p>
+      <div id="profile-summary" class="profile-summary" aria-label="Your nature profile"></div>
+    </section>
+
+    <section id="recommendations-app" aria-label="Recommended adventures" hidden>
+      <div class="results-toolbar">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>Your adventures <span id="results-count"></span></h2>
+        </div>
+      </div>
+
+      <div id="category-filters" class="category-filters" role="group" aria-label="Filter by activity"></div>
+      <p id="results-message" class="results-message" aria-live="polite"></p>
+
+      <div id="featured-trip"></div>
+      <h2 id="alternatives-heading" class="alternatives-heading" hidden>More Adventures For You</h2>
+      <div id="trips-grid" class="trips-grid"></div>
+
+      <section id="empty-results" class="empty-results" hidden>
+        <h3 id="empty-title">No adventures found.</h3>
+        <p id="empty-description"></p>
+        <button id="clear-filters" class="secondary-btn" type="button">Show all categories</button>
+        <a id="edit-preferences" class="secondary-btn" href="questionnaire.html" hidden>Edit my answers ↗</a>
+      </section>
+
+    </section>
+
+    <section id="page-error" class="page-error" hidden>
+      <h2>Let's get to know you first.</h2>
+      <p>Complete the questionnaire to discover personalized nature experiences.</p>
+      <a class="primary-btn" href="questionnaire.html">Start questionnaire ↗</a>
+    </section>
+  </main>
+
+  <dialog id="trip-dialog" class="trip-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-summary">
+    <div class="dialog-head">
+      <span>HUMANATURE / EXPERIENCE</span>
+      <button id="dialog-close" type="button" aria-label="Close trip details">×</button>
+    </div>
+    <div id="dialog-art"></div>
+    <div class="dialog-body">
+      <div class="dialog-intro">
+        <p id="dialog-location" class="trip-location"></p>
+        <div id="dialog-match"></div>
+      </div>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-summary"></p>
+      <div id="dialog-stats" class="trip-meta"></div>
+
+      <h3>Why it matches</h3>
+      <div id="dialog-matches" class="matching-characteristics"></div>
+      <h3>What to expect</h3>
+      <ul id="dialog-highlights"></ul>
+      <h3>Before you go</h3>
+      <p id="dialog-safety"></p>
+      <button id="dialog-save" class="primary-btn" type="button">♡ Save adventure</button>
+    </div>
+  </dialog>
+</body>
+</html>

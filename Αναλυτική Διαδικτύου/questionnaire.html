@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tell HumaNature what your ideal nature escape looks like.">
+  <title>Your Nature Profile | HumaNature</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/questionnaire.css">
+  <script src="js/questionnaire.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="HumaNature home">HumaNature<span>.</span></a>
+    <span class="header-caption">FIND YOUR NATURE</span>
+  </header>
+
+  <main class="questionnaire-container">
+    <div class="questionnaire-header">
+      <a class="back-link" href="index.html">← Back to home</a>
+      <span id="step-counter" aria-live="polite">01 / 09</span>
+    </div>
+
+    <div id="progress-track" class="progress-track" role="progressbar"
+         aria-label="Questionnaire progress" aria-valuemin="0"
+         aria-valuemax="9" aria-valuenow="1">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <section class="question-content" aria-labelledby="question-title">
+      <p id="question-eyebrow" class="question-eyebrow">YOUR NATURE PROFILE</p>
+      <h1 id="question-title" tabindex="-1"></h1>
+      <p id="question-description"></p>
+      <div id="options-container" class="options-grid" role="group" aria-label="Answer options"></div>
+
+      <div id="text-answer-container" class="text-answer-container" hidden>
+        <label for="free-text-answer">Your ideal experience (optional)</label>
+        <textarea id="free-text-answer" rows="5" maxlength="1500"></textarea>
+        <p class="optional-hint">Tell us anything else you'd like, or leave this blank.</p>
+      </div>
+    </section>
+
+    <div class="questionnaire-footer">
+      <button id="previous-btn" class="secondary-btn" type="button" hidden>← Previous</button>
+      <button id="next-btn" class="primary-btn" type="button" disabled>Continue →</button>
+    </div>
+  </main>
+</body>
+</html>
